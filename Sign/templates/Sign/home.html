@@ -15,34 +15,75 @@
         <meta charset="utf-8">
        <meta charset="utf-8">
 
-
-
-<!-- code of bootstrap start from here -->
-
-              <nav class="navbar-custom" >
-                 <legend style = " color :white; padding-top: 20px;  margin-left : 600px ; ">
-                    PILLERS
-                 </legend>
-              </nav>
-
-              <div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:200px;" id="mySidebar">
-                         <a id = "btn2" class="btn btn-info" role="button" href="#"> Home</a>
-                          <a id = "btn1" class="btn btn-info" role="button" href="#"> Recruiter</a>
-                          <a id = "btn1" class="btn btn-info" role="button" href="#"> Worker</a>
-                          <a id = "btn1" class="btn btn-info" role="button" href="#">Registeration</a>
-                </div>
-
-      <div class="w3-container">
-        <h1>My Page</h1>
-      </div>
-      </div>
-    </div>
-
-
-
-
   </head>
   <body>
+
+      <!-- code of bootstrap start from here -->
+          <nav class="navbar-custom" >
+            <div class="row">
+               <div class="col-md-2" id ="n1">
+                 <img  src={% static 'media/logo4.png' %}  image responsive class="ii">
+
+               </div>
+                  <div class="col-md-2" id = "n2">
+                    <legend style = " color :white; padding-top: 20px;  margin-left : 400px ; ">
+                         PILLERS
+                    </legend>
+                   <img  src={% static 'media/logo5.png' %} style=" margin-top: 0px; margin-left:900px;" image responsive class="ii">
+                   <a href="#">Profile</a>
+
+                    <!--
+                       <ul>
+                           <li> <a href="#"> Profile</a> </li>
+                           <li> <a href="#">Profile 2</a> </li>
+                           <li> <a href="#"> Help </a>  </li>
+                           <li> <a href="#"> Logout</a> </li>
+                         </ul>
+-->
+                  </div>
+
+              </div>
+          </nav>
+
+    <div class="wrapper">
+         <div class="sidebar">
+
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#"> Recruiters </a></li>
+          <li><a href="#"> Workers </a></li>
+          <li><a href="#"> Registeration </a></li>
+
+      </ul>
+  </div>
+  <div class="main_content">
+
+
+
+              <form>
+                 <div class="row">
+                     <div class="col">
+                      <label id = "l1" >Total Workers : </label><input type="text" id = "t1" class="form-control" placeholder="readonly Total Workers" readonly>
+                      </div>
+                      <div class="col">
+                      <label id = "l2">Total Recruiters : </label>  <input type="text" id = "t2" class="form-control" placeholder="Total Recruiter" readonly>
+                       </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                          <label id = "l3">Todays Request : </label><input type="text" id = "t3" class="form-control" placeholder="readonly Todays Request" readonly>
+                         </div>
+                         <div class="col">
+                                <label id = "l4">Todays Accepted Request: </label> <input type="text" id = "t4" class="form-control" placeholder="readonly Todays Accepted Request" readonly>
+                          </div>
+                       </div>
+
+                  </form>
+
+  </div>
+</div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

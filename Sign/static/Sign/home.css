@@ -1,47 +1,166 @@
 .navbar-custom{
     background-color: #0000ff;
     height :80px;
+    width : 1380px;
 }
 
-#mySidebar{
+#n2{
+   margin-right: 500px;
+}
 
-     margin-top: 0px ;
+#n1{
+        margin-top: 20px;
+        margin-left: 50px;
+}
 
-    padding-left: 0px;
-     height : 600px;
-     width : 190px;
-     background-color: #0000ff;
+/*
+#n2 ul{
+
+  padding: 0;
+  margin: 0;
+  float: right;
+  margin-right: 30px;
+}
+
+#n2 ul li{
+
+  background-color: #0000ff;
+  position: relative;;
+  list-style: none;
+  display: inline-block;
+}
+
+#n2 ul li a{
+
+      display: block;
+      padding: 0.15px;
+      color : white;
+      text-decoration: none;
+      line-height: 60px;
+      font-size: 20px;
+}
+
+#n2 ul li a:hover{
+  background-color: #594f8d;
+}
+
+#n2 ul ul {
+
+    position: absolute;
+    top : 60px;
+    display : none;
+}
+
+#n2 ul li:hover > ul{
+
+  display: block;
+}
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #0000ff;
+  padding: 30px 0px;
+  position: fixed;
 }
 
 
-#btn1{
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
 
-    margin-top: 5px;
-    padding-left: 0px;
-    width: 190px;
-    height : 50px;
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
 
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
 }
 
 
-#btn2{
-
-    height: 50px;
-    padding-left: 0px;
-    width: 190px;
-
+.wrapper .main_content .info{
+  margin: 20px;
+  line-height: 25px;
 }
 
 #l1{
+  margin-top : 60px;
+  margin-left: 100px;
 
-    margin-top: 100px;
-    margin-left: 200px;
+}
+#t1{
+   margin-top : 5px;
+   margin-left: 100px;
+   width : 200px;
+}
+
+#l2{
+  margin-top : 60px;
+  margin-left: 120px;
 
 }
 
 
-#l2{
+#t2{
+   margin-top : 5px;
+   margin-left: 120px;
+   width : 200px;
+}
 
-    margin-
-    margin-left: 400px;
+
+#l3{
+  margin-top : 60px;
+  margin-left: 100px;
+
+}
+
+
+#t3{
+   margin-top : 5px;
+   margin-left: 100px;
+   width : 200px;
+}
+
+
+#l4{
+  margin-top : 60px;
+  margin-left: 120px;
+}
+
+#t4{
+   margin-top : 5px;
+   margin-left: 120px;
+   width : 200px;
 }
