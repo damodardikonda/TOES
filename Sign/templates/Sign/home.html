@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Home</title>
 
     <style>
 
@@ -80,8 +80,8 @@ img {
   
 <div class="sidenav">
   <a href="#about" style="margin-top: 30px;">Home</a>
-  <a href="#services">Recruiter</a>
-  <a href="#clients">Worker</a>
+  <a href="{% url 'recruiters'%}">Recruiter</a>
+  <a href="{% url 'workers'%}">Worker</a>
   <a href="#contact">Register</a>
   <div class="Container" style="margin-left: 30px;color:#989898">
   <h6 style="margin-top: 280px; ">Date : <h6 id="date"></h6></h6>
@@ -93,7 +93,7 @@ img {
 <div class="pillnav">
   
     <nav class="navbar navbar-brand-center navbar-light bg-light fixed-top justify-content-between">
-     <a class="navbar-brand-center" ><img src="{% static 'media/logo.png' %} "alt="Avatar" style="width: 50px;margin-right: 10px;margin-left: 40px;"></a>
+     <a class="navbar-brand-center" href= {% url 'Home' %} ><img src="{% static 'media/logo.png' %} "alt="Avatar" style="width: 50px;margin-right: 10px;margin-left: 40px;"></a>
  <div class="nav-item nav-link "style="color:white">PILLARS</div>
       <div class="nav-item nav-link dropdown" >
       <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{% static 'media/img_avatar.png' %}" alt="Avatar" style="width:50px"><span class="caret"></span></a>

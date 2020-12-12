@@ -9,4 +9,6 @@ urlpatterns = [
     path('forget_pass/', views.forget_pass , name = 'forget_pass'),
     path('home/' , views.home , name = 'Home'),
     path('phone/' ,views.phone , name ='phone' ),
+    path('workers/' ,views.workers , name ='workers' ),
+    path('recruiters/' ,views.recruiters , name ='recruiters' ),
 ]

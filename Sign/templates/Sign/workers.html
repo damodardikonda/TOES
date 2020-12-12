@@ -1,0 +1,306 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>workers</title>
+
+    <style>
+
+
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 58px;
+  left: 0;
+  background-color: #6f008a;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: -1px 10px;
+}
+
+.pillnav {
+  margin-left: 0px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: -1px 10px;
+}
+
+
+
+.bg-light {
+    background-color: #7a0099!important;
+}
+
+ 
+    
+
+
+img {
+  border-radius: 40%;
+}
+
+
+</style>
+  </head>
+  <body>
+
+      <!-- code of bootstrap start from here -->
+  <div class="sidenav">
+  <a href="{% url 'Home'%}" style="margin-top: 30px;">Home</a>
+  <a href="{% url 'recruiters'%}">Recruiter</a>
+  <a href="{% url 'workers'%}">Worker</a>
+  <a href="#contact">Register</a>
+  <div class="Container" style="margin-left: 30px;color:#989898">
+  <h6 style="margin-top: 280px; ">Date : <h6 id="date"></h6></h6>
+  <h6>Time : <h6 id="time"></h6></h6>
+
+</div>
+</div>
+
+<div class="pillnav">
+  
+    <nav class="navbar navbar-brand-center navbar-light bg-light fixed-top justify-content-between">
+     <a class="navbar-brand-center" href= {% url 'Home' %}><img src="{% static 'media/logo.png' %} "alt="Avatar" style="width: 50px;margin-right: 10px;margin-left: 40px;"></a>
+ <div class="nav-item nav-link "style="color:white">PILLARS</div>
+      <div class="nav-item nav-link dropdown" >
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{% static 'media/img_avatar.png' %}" alt="Avatar" style="width:50px"><span class="caret"></span></a>
+      
+      <ul class="dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Sign out</a></li>
+        </ul>
+      </div>
+
+</nav>
+
+</div>
+<div class="main_content">
+  <div class="container">
+  
+    <div class="row" style="  margin-top: 80px;">
+    
+
+          <!--Table-->
+<table class="table table-hover table-fixed" style=" margin-left: 100px;">
+
+  <!--Table head-->
+  <thead>
+    <tr>
+      <th>Sr.No</th>
+      <th>Name</th>
+      <th>Email Id</th>
+      <th>Username</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Adhar No</th>
+      <th>Gender</th>
+      <th>Work</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Aadesh</td>
+      <td>Addy123@gmail.com</td>
+      <td>addy</td>
+      <td>28198928</td>
+      <td>dattawadi</td>
+      <td>ftr5152</td>
+      <td>Male</td>
+      <td>Electrician</td>
+    </tr>
+  </tbody>
+  <!--Table body-->
+
+</table>
+<!--Table-->
+
+
+
+      </div>            
+    </div>
+  </div>
+</div>
+
+<script>
+var d = new Date();
+var date = d.toLocaleDateString();
+var time = d.toLocaleTimeString();
+document.getElementById("date").innerHTML = date;
+document.getElementById("time").innerHTML = time;
+</script>
+
+
+    <!-- Optional JavaScri0pt -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

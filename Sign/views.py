@@ -30,4 +30,10 @@ def home(request):
         return render(request, 'Sign/home.html',context=d)
 
 def phone(request):
-    return render(request , 'Sign/phoneno.html')
+    return render(request , 'Sign/phone.html')
+
+def workers(request):
+    return render(request , 'Sign/workers.html')
+
+def recruiters(request):
+    return render(request , 'Sign/recruiters.html')
