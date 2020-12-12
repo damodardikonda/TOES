@@ -28,3 +28,6 @@ def home(request):
 
         }
         return render(request, 'Sign/home.html',context=d)
+
+def phone(request):
+    return render(request , 'Sign/phoneno.html')
