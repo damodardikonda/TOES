@@ -1,95 +1,251 @@
-{% load static%}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% load static %}
+<!doctype html>
+<html lang="en">
   <head>
 
-        <!-- Required meta tags -->
-       <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-       <!-- Bootstrap CSS -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'Sign/home.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <meta charset="utf-8">
-       <meta charset="utf-8">
+    <title> TOES Admin Web Page</title>
 
+    <style>
+
+
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 58px;
+  left: 0;
+  background-color: #6f008a;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.dropdown-menu {
+  background-color: #0d47a1;
+
+}
+
+.dropdown-menu a{
+ color: #818181;
+}
+.dropdown-menu a:hover {
+  color: #f1f1f1;
+}
+
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: -1px 10px;
+}
+
+.pillnav {
+  margin-left: 0px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: -1px 10px;
+}
+
+
+
+.bg-light {
+    background-color: #7a0099!important;
+}
+
+
+
+
+
+img {
+  border-radius: 40%;
+}
+
+
+</style>
   </head>
   <body>
 
-      <!-- code of bootstrap start from here -->
-          <nav class="navbar-custom" >
-            <div class="row">
-               <div class="col-md-2" id ="n1">
-                 <img  src={% static 'media/logo4.png' %}  image responsive class="ii">
-
-               </div>
-                  <div class="col-md-2" id = "n2">
-                    <legend style = " color :white; padding-top: 20px;  margin-left : 400px ; ">
-                         PILLERS
-                    </legend>
-                   <img  src={% static 'media/logo5.png' %} style=" margin-top: 0px; margin-left:900px;" image responsive class="ii">
-                   <a href="#">Profile</a>
-
-                    <!--
-                       <ul>
-                           <li> <a href="#"> Profile</a> </li>
-                           <li> <a href="#">Profile 2</a> </li>
-                           <li> <a href="#"> Help </a>  </li>
-                           <li> <a href="#"> Logout</a> </li>
-                         </ul>
--->
-                  </div>
-
-              </div>
-          </nav>
-
-    <div class="wrapper">
-         <div class="sidebar">
-
-      <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#"> Recruiters </a></li>
-          <li><a href="#"> Workers </a></li>
-          <li>   <a href="#"> Registeration </a></li>
-
-      </ul>
-  </div>
-  <div class="main_content">
 
 
+<div class="sidenav">
+  <a href=" {% url 'Home' %} " style="margin-top: 30px;">Home</a>
+  <a href="#services">Recruiter</a>
+  <a href="#clients">Worker</a>
+  <a href=" {% url 'register' %} " >Registeration</a>
 
-              <form>
-                 <div class="row">
-                     <div class="col">
-                      <label id = "l1" >Total Workers : </label><input type="text" id = "t1" class="form-control" placeholder="readonly Total Workers" readonly>
-                      </div>
-                      <div class="col">
-                      <label id = "l2">Total Recruiters : </label>  <input type="text" id = "t2" class="form-control" placeholder="Total Recruiter" readonly>
-                       </div>
-                    </div>
+  <div class="Container" style="margin-left: 30px;color:#989898">
+  <h6 style="margin-top: 280px; ">Date : <h6 id="date"></h6></h6>
+  <h6>Time : <h6 id="time"></h6></h6>
 
-                    <div class="row">
-                        <div class="col">
-                          <label id = "l3">Todays Request : </label><input type="text" id = "t3" class="form-control" placeholder="readonly Todays Request" readonly>
-                         </div>
-                         <div class="col">
-                                <label id = "l4">Todays Accepted Request: </label> <input type="text" id = "t4" class="form-control" placeholder="readonly Todays Accepted Request" readonly>
-                          </div>
-                       </div>
+</div>
+</div>
 
-                  </form>
+<div class="pillnav">
 
-  </div>
+    <nav class="navbar navbar-brand-center navbar-light bg-light fixed-top justify-content-between">
+     <a class="navbar-brand-center" ><img src="{% static 'media/logo4.png' %} "alt="Avatar" style="width: 50px;margin-right: 10px;margin-left: 40px;"></a>
+ <div class="nav-item nav-link "style="color:white">PILLARS</div>
+      <div class="nav-item nav-link dropdown" >
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{% static 'media/logo5.png' %}" alt="Avatar" style="width:50px"><span class="caret"></span></a>
+
+      <ul class="dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a  href="{% url 'sign_in' %}">Sign out</a></li>
+
+        </ul>
+      </div>
+
+</nav>
+
 </div>
 
 
-    <!-- Optional JavaScri0pt -->
+<div class="container">
+
+{% block content %}
+
+ <div class="row" style="  margin-top: 100px;">
+
+
+        <div class="card" style="width: 20rem;margin: auto;">
+            <div class="card-body" style="background-color: #f1e3f1">
+              <h5 class="card-title">Total Workers</h5>
+              <h2 class="card-subtitle mb-2 text-muted">1 Million</h2>
+           </div>
+        </div>
+
+           <div class="card" style="width: 20rem;margin: auto;">
+            <div class="card-body" style="background-color: #f1e3f1">
+              <h5 class="card-title">Total Recruiters</h5>
+              <h2 class="card-subtitle mb-2 text-muted">1 Million</h2>
+            </div>
+          </div>
+
+
+      </div>
+
+      <div class="row" style="  margin-top: 50px;">
+
+        <div class="card" style="width: 20rem;margin: auto;">
+            <div class="card-body" style="background-color: #f1e3f1">
+              <h5 class="card-title">Total Requests</h5>
+              <h2 class="card-subtitle mb-2 text-muted">1 Million</h2>
+           </div>
+        </div>
+
+           <div class="card" style="width: 20rem;margin: auto;">
+            <div class="card-body" style="background-color:#f1e3f1">
+              <h5 class="card-title">Accepted Requests</h5>
+              <h2 class="card-subtitle mb-2 text-muted">1 Million</h2>
+            </div>
+          </div>
+
+
+      </div>
+
+   <div class="row" style=" margin-top: 50px;">
+
+      <div id="piechart" style="margin: auto;"></div>
+      <div id="piechart2" style="margin: auto;"></div>
+
+{% endblock %}
+      </div>
+
+</div>
+
+
+
+<script>
+var d = new Date();
+var date = d.toLocaleDateString();
+var time = d.toLocaleTimeString();
+document.getElementById("date").innerHTML = date;
+document.getElementById("time").innerHTML = time;
+</script>
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Monthly Request', 8],
+  ['Monthly Request Accepted', 2],
+
+]);
+
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data);
+}
+</script>
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Total Recruiters', 6],
+  ['Total Workers', 4],
+
+]);
+
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+  chart.draw(data);
+}
+</script>
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
   </body>
 </html>

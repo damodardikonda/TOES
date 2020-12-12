@@ -1,95 +1,49 @@
-{% load static%}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-
-        <!-- Required meta tags -->
-       <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-       <!-- Bootstrap CSS -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'Sign/home.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
-        <meta charset="utf-8">
-       <meta charset="utf-8">
-
-  </head>
-  <body>
-
-      <!-- code of bootstrap start from here -->
-          <nav class="navbar-custom" >
-            <div class="row">
-               <div class="col-md-2" id ="n1">
-                 <img  src={% static 'media/logo4.png' %}  image responsive class="ii">
-
-               </div>
-                  <div class="col-md-2" id = "n2">
-                    <legend style = " color :white; padding-top: 20px;  margin-left : 400px ; ">
-                         PILLERS
-                    </legend>
-                   <img  src={% static 'media/logo5.png' %} style=" margin-top: 0px; margin-left:900px;" image responsive class="ii">
-                   <a href="#">Profile</a>
-
-                    <!--
-                       <ul>
-                           <li> <a href="#"> Profile</a> </li>
-                           <li> <a href="#">Profile 2</a> </li>
-                           <li> <a href="#"> Help </a>  </li>
-                           <li> <a href="#"> Logout</a> </li>
-                         </ul>
--->
-                  </div>
-
-              </div>
-          </nav>
-
-    <div class="wrapper">
-         <div class="sidebar">
-
-      <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#"> Recruiters </a></li>
-          <li><a href="#"> Workers </a></li>
-          <li><a href="{% url 'Register/phoneno.html'%}"> Registeration </a></li>
-
-      </ul>
-  </div>
-  <div class="main_content">
+{% extends 'Sign/home.html' %}
+{ % load static % }
+{% block content %}
 
 
+<legend style=" margin-top : 150px; margin-left : 500px;"> Phone Numbers</legend>
 
-              <form>
-                 <div class="row">
-                     <div class="col">
-                      <label id = "l1" >Total Workers : </label><input type="text" id = "t1" class="form-control" placeholder="readonly Total Workers" readonly>
-                      </div>
-                      <div class="col">
-                      <label id = "l2">Total Recruiters : </label>  <input type="text" id = "t2" class="form-control" placeholder="Total Recruiter" readonly>
-                       </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col">
-                          <label id = "l3">Todays Request : </label><input type="text" id = "t3" class="form-control" placeholder="readonly Todays Request" readonly>
-                         </div>
-                         <div class="col">
-                                <label id = "l4">Todays Accepted Request: </label> <input type="text" id = "t4" class="form-control" placeholder="readonly Todays Accepted Request" readonly>
-                          </div>
-                       </div>
+<div class="container" >
+  <table class="table table-bordered" style=" margin-top : 50px ;margin-left : 200px; width : 800px; ">
+    <thead>
+      <tr style=" background-color : #5c6bc0 ; ">
+        <th>Sr no.</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>8999252564</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>9011252564</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>8099252564</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>8909852564</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>8923352564</td>
+      </tr>
 
-                  </form>
+    </tbody>
+  </table>
 
-  </div>
+
+  <a id = "btn1" style="  margin-left : 1000px;" class="btn btn-info" role="button" href=" {% url 'create' %} "> Create </a>
+
+
 </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+{% endblock %}

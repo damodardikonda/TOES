@@ -29,5 +29,11 @@ def home(request):
         }
         return render(request, 'Sign/home.html',context=d)
 
-def phone(request):
-    return render(request , 'Sign/phoneno.html')
+def register(request):
+    return render(request, 'Sign/register.html')
+
+def create(request):
+    return render( request , 'Sign/create.html')
+
+def phone_disp(request):
+    return render( request , 'Sign/phone_disp.html')
